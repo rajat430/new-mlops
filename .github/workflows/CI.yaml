@@ -95,6 +95,10 @@ jobs:
     uses: rajat430/mlops/.github/workflows/CD.yaml@main
     with:
       image_sha_id: ${{github.sha}}
+    secrets:
+      CREDS: ${{ secrets.CREDS }}
+      AZURE_WEBAPP_NAME: ${{ secrets.AZURE_WEBAPP_NAME }}
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       
 
 
