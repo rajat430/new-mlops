@@ -1,0 +1,12 @@
+pandas
+scikit-learn
+mlflow
+dvc
+pyyaml
+joblib
+uvicorn
+fastapi
+python-multipart
+pytest
+httpx
+dvc-azure
