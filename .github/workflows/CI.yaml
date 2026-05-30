@@ -95,6 +95,7 @@ jobs:
     uses: ./.github/workflows/CD.yaml
     with:
       image_sha_id: ${{github.sha}}
+    secrets: inherit
       
 
 
