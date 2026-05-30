@@ -95,7 +95,6 @@ jobs:
     uses: rajat430/mlops/.github/workflows/CD.yaml@main
     with:
       image_sha_id: ${{github.sha}}
-      secrets: inherit
       
 
 
