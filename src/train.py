@@ -2,7 +2,7 @@ import pandas as pd
 import yaml
 import mlflow
 import joblib
-# Start MLflow  
+# Start MLflow   
 mlflow.set_tracking_uri("sqlite:///mlflow.db")
 mlflow.set_experiment("Titanic_MLOps")
 
