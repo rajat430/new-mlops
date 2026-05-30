@@ -5,7 +5,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: login to azure
-        uses: Azure/login@v3  
+      - name: Azure Login
+        uses: Azure/login@v3
         with:
-          creds: ${{secrets.CREDS}} 
+          creds: ${{ secrets.CREDS }}
