@@ -92,9 +92,10 @@ jobs:
   deploy:
     needs: build
     if: github.event_name == 'pull_request' && github.base_ref == 'main'
-    uses: rajat430/mlops/.github/workflows/CD.yaml@main
+    uses: ./.github/workflows/CD.yaml
     with:
       image_sha_id: ${{github.sha}}
+      secrets: inherit
       
 
 
