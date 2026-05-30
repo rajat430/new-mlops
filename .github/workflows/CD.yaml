@@ -6,13 +6,6 @@ on:
       image_sha_id:
         required: true
         type: string
-    secrets:
-      CREDS:
-        required: true
-      AZURE_WEBAPP_NAME:
-        required: true
-      DOCKER_USERNAME:
-        required: true
 jobs:
   deploy:
     runs-on: ubuntu-latest
