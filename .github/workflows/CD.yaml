@@ -6,9 +6,13 @@ on:
       image_sha_id:
         required: true
         type: string
-permissions:
-  contents: write
-  id-token: write
+    secrets:
+      CREDS:
+        required: true
+      AZURE_WEBAPP_NAME:
+        required: true
+      DOCKER_USERNAME:
+        required: true
 jobs:
   deploy:
     if: github.event.pull_request.merged == true
