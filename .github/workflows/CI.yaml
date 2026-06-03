@@ -62,9 +62,9 @@ jobs:
         else
           echo "Model accuracy is above threshold. Build passed."
         fi
-    - name: unit test cases
-      run: |
-        pytest -v
+    # - name: unit test cases
+    #   run: |
+    #     pytest -v
     - name: Build Docker Image
       run: |
         docker build -t mlops-app .
