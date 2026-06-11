@@ -14,7 +14,7 @@ COPY --from=build /venv /venv
 ENV PATH="/venv/bin:$PATH"
 
 WORKDIR /app
-COPY --from=build /app/app .
+COPY --from=build /app .
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
