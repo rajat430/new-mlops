@@ -12,7 +12,7 @@ data = {
     "Fare": [8]
 }
 
-# Convert to dataframe
+# Convert to  dataframe
 df = pd.DataFrame(data)
 
 # Prediction
