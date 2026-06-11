@@ -3,7 +3,7 @@ import pandas as pd
 
 mlflow.set_tracking_uri("sqlite:///mlflow.db")
 
-# Get experiment
+# Get  experiment
 experiment = mlflow.get_experiment_by_name("Titanic_MLOps")
 try:
     # Search runs
