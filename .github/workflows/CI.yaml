@@ -91,7 +91,7 @@ jobs:
 
   deploy:
     needs: build
-    if: github.event_name == 'pull_request' && github.base_ref == 'main'
+    if: github.event.pull_request.merged == true && github.base_ref == 'main'
     uses: ./.github/workflows/CD.yaml
     with:
       image_sha_id: ${{github.sha}}
