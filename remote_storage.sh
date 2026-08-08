@@ -11,4 +11,9 @@ dvc add data/raw/
 git commit -m "track dataset with dvc"
 dvc remote add -d myremote azure://data
 dvc remote modify myremote account_name 'mystorage0101010101011'
-dvc remote modify --local myremote account_key 'abcd'
+dvc remote modify --local myremote account_key "$SECRETS"
+dvc repro
+dvc push
+git add .
+git commit -m "push dataset to remote storage"
+git push
