@@ -3,7 +3,8 @@ rm -rf .dvc
 rm -f .dvcignore
 rm dvc.lock
 #Initialize dvc and track the dataset with dvc
-
+mkdir -p data/raw
+mkdir -p data/processed
 dvc init
 git add .dvc .dvcignore
 git commit -m "init dvc"
