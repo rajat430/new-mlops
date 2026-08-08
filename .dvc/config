@@ -1,5 +1,0 @@
-[core]
-    remote = myremote
-['remote "myremote"']
-    url = azure://data
-    account_name = mystorage0101010101011
