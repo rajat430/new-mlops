@@ -1,0 +1,57 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+    - path: data/raw/Titanic-Dataset.csv
+      hash: md5
+      md5: 2309cc5f04782ed9bb6016d9f4e381cf
+      size: 61194
+    - path: src/preprocess.py
+      hash: md5
+      md5: 01734b0d116000773de243f7dfdab91d
+      size: 1077
+    outs:
+    - path: data/processed/X_test.csv
+      hash: md5
+      md5: bd919f84c94b3e038673f30e505ca60c
+      size: 2739
+    - path: data/processed/X_train.csv
+      hash: md5
+      md5: 1102e5b8c95b60cb88a3280b5c9d0806
+      size: 10714
+    - path: data/processed/y_test.csv
+      hash: md5
+      md5: 9013c44486e369a63ca7226075a95692
+      size: 367
+    - path: data/processed/y_train.csv
+      hash: md5
+      md5: 1bbe9ea4a99323d5d8e4d64a560cc322
+      size: 1433
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/processed/X_train.csv
+      hash: md5
+      md5: 1102e5b8c95b60cb88a3280b5c9d0806
+      size: 10714
+    - path: src/train.py
+      hash: md5
+      md5: d0950af578e5f39f3955fd862a7688bc
+      size: 886
+    outs:
+    - path: models/model.pkl
+      hash: md5
+      md5: 5429423fcf6db5b6b72befe7a0dbe929
+      size: 5405
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: models/model.pkl
+      hash: md5
+      md5: 5429423fcf6db5b6b72befe7a0dbe929
+      size: 5405
+    - path: src/evaluate.py
+      hash: md5
+      md5: 67bb62aebfb0c5424590f25092411530
+      size: 518
